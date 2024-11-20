@@ -1,3 +1,4 @@
+# Funksjon for å lese inn en tekstfil
 def lesInnTekst(filnavn):
     try:
         with open(filnavn, 'r', encoding='utf-8') as fil:
@@ -10,5 +11,10 @@ def lesInnTekst(filnavn):
         print(f"En feil oppstått: {e}")
         return []
 
-
-In progress
+# Funksjon for å skrive ut hele teksten
+def printTekst(tekst):
+    if not tekst:
+        print("Teksten er tom eller ikke lastet.")
+        return
+    for linje in tekst:
+        print(linje, end='')
