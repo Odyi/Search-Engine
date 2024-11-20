@@ -18,3 +18,8 @@ def printTekst(tekst):
         return
     for linje in tekst:
         print(linje, end='')
+        funnet = True
+    if not funnet:
+        print(f"Fant ikke ordet '{ord}' i teksten.")
+
+# Funksjon som sjekker om et ord finnes i teksten og returnerer True/False
