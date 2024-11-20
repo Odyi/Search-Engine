@@ -5,10 +5,10 @@ def lesInnTekst(filnavn):
             tekst = fil.readlines()
         return tekst
     except FileNotFoundError:
-        print(f"Feil: Finner ikke filen '{filnavn}'.")
+        print(f"Feil: Finner ikke filen, Womp womp '{filnavn}'.")
         return []
     except Exception as e:
-        print(f"En feil oppstått: {e}")
+        print(f"En feil oppstått!: {e}")
         return []
 
 # Funksjon for å skrive ut hele teksten
