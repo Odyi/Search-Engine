@@ -51,3 +51,13 @@ def hovedprogram():
 
     if not tekst:
         return
+
+while True:
+        print("\nMeny:")
+        print("1. Vis hele teksten")
+        print("2. Søk etter et ord og vis linjer")
+        print("3. Finn ut om et ord finnes i teksten")
+        print("4. Tell antall av samme ord")
+        print("5. Avslutt")
+        
+        valg = input("Velg et alternativ (1-5): ")
