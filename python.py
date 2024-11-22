@@ -23,3 +23,31 @@ def printTekst(tekst):
         print(f"Fant ikke ordet '{ord}' i teksten.")
 
 # Funksjon som sjekker om et ord finnes i teksten og returnerer True/False
+def finnOrd(tekst, ord):
+    for linje in tekst:
+        if ord in linje:
+            return True
+    return False
+
+# Funksjon som finner linjene et ord finnes på
+def finnLinje(tekst, ord):
+    linjer = []
+    for indeks, linje in enumerate(tekst, start=1):
+        if ord in linje:
+            linjer.append(indeks)
+    return linjer
+
+# Funksjon som teller hvor mange ganger et ord forekommer i teksten
+def tellOrd(tekst, ord):
+    teller = 0
+    for linje in tekst:
+        teller += linje.count(ord)
+    return teller
+
+# Hovedprogram for å demonstrere funksjonaliteten
+def hovedprogram():
+    filnavn = input("Skriv inn navnet på tekstfilen du vil lese: ")
+    tekst = lesInnTekst(filnavn)
+
+    if not tekst:
+        return
