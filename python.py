@@ -29,7 +29,7 @@ def finnOrd(tekst, ord):
             return True
     return False
 
-# Funksjon som finner linjene et ord finnes på
+# Funksjon som finner linjene et ord er på
 def finnLinje(tekst, ord):
     linjer = []
     for indeks, linje in enumerate(tekst, start=1):
@@ -37,14 +37,14 @@ def finnLinje(tekst, ord):
             linjer.append(indeks)
     return linjer
 
-# Funksjon som teller hvor mange ganger et ord forekommer i teksten
+# Funksjon som teller hvor mange ganger et ord gjentar seg i teksten
 def tellOrd(tekst, ord):
     teller = 0
     for linje in tekst:
         teller += linje.count(ord)
     return teller
 
-# Hovedprogram for å demonstrere funksjonaliteten
+# Hovedprogram 
 def hovedprogram():
     filnavn = input("Skriv inn navnet på tekstfilen du vil lese: ")
     tekst = lesInnTekst(filnavn)
