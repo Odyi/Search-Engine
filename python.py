@@ -61,3 +61,30 @@ while True:
         print("5. Avslutt")
         
         valg = input("Velg et alternativ (1-5): ")
+
+
+        if valg == "1":
+            printTekst(tekst)
+        elif valg == "2":
+            ord = input("Skriv inn ordet du vil søke etter: ")
+            printOrd(tekst, ord)
+        elif valg == "3":
+            ord = input("Skriv inn ordet du vil sjekke: ")
+            finnes = finnOrd(tekst, ord)
+            if finnes:
+                print(f"Ordet '{ord}' finnes i teksten!.")
+            else:
+                print(f"Ordet '{ord}' finnes ikke i teksten :(.")
+        elif valg == "4":
+            ord = input("Skriv inn ordet du vil telle: ")
+            antall = tellOrd(tekst, ord)
+            print(f"Ordet '{ord}' dukker opp {antall} gang(er) i teksten.")
+        elif valg == "5":
+            print("Avslutter programmet, Ha en fin dag :)")
+            break
+        else:
+            print("Ugyldig valg, prøv igjen.")
+
+# Kjør hovedprogrammet
+if __name__ == "__main__":
+    hovedprogram()
